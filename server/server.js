@@ -43,6 +43,7 @@ else if (numObject.operation == "/") {
 app.get('/operations', (req,res)=>{
     console.log('you go to /operations');
     res.send(operations);
+    operations = [];
 })
 
 app.post('/operations', (req,res)=>{
@@ -50,5 +51,5 @@ app.post('/operations', (req,res)=>{
     let numObject = req.body;
     mathOperations(numObject);
     console.log('in operations array', operations);
-    res.sendStatus(201);
+    res.sendStatus(200);
 })

@@ -7,6 +7,7 @@ function onReady(){
     $('#multiplyButton').on('click', multiplyNum);
     $('#divideButton').on('click', divideNum);
     $('#equalsButton').on('click', equalsNum);
+    $('#clearButton').on('click', clearNum);
 }//end onReady
 
 function addNum(){
@@ -54,12 +55,20 @@ $.ajax({
     url: '/operations'
 }).then(function(response){
     console.log('Get from operations', response);
+    let el = $('#mathOut');
+    el.empty();
+    for (let i = 0; i < response.length; i++) {
+    el.append(`<div><strong>${response[i].sum}</strong></div>`)
+    }//end for
 }).catch(function(err){
     alert('error getting operations');
     console.log(err);
 })//end AJAX
-
 //clear inputs
-$('#firstNumber').val('')  
-$('#secondNumber').val('')  
 }//end equalsNum
+
+function clearNum(){
+    console.log('in clearNum');
+$('#firstNumber').val('');  
+$('#secondNumber').val(''); 
+}//end clearNum
