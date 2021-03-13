@@ -1,5 +1,4 @@
 $(document).ready(onReady);
-let operation = "";
 function onReady(){
     //click handlers
     $('#addButton').on('click', addNum);
@@ -36,19 +35,28 @@ let numObject ={
     num1: $('#firstNumber').val(),
     num2: $('#secondNumber').val()
 }//end numObject
-//conditional for math operations
-if (operation == "+") {
-    console.log(sum = Number(numObject.num1) + Number(numObject.num2));
-} 
-else if (operation == "-") {
-    console.log(sum = Number(numObject.num1) - Number(numObject.num2));
-} 
-else if (operation == "*") {
-    console.log(sum = Number(numObject.num1) * Number(numObject.num2));
-}  
-else if (operation == "/") {
-    console.log(sum = Number(numObject.num1) / Number(numObject.num2));
-} 
+
+$.ajax({
+    type: 'POST',
+    url: '/operations',
+    data: numObject
+}).then(function(response){
+    console.log('back from POST with:', response);
+}).catch(function(err){
+    alert('error with operations');
+    console.log(err);
+})//end AJAX
+
+$.ajax({
+    type: 'GET',
+    url: '/operations'
+}).then(function(response){
+    console.log('Get from operations', response);
+}).catch(function(err){
+    alert('error getting operations');
+    console.log(err);
+})//end AJAX
+
 //clear inputs
 $('#firstNumber').val('')  
 $('#secondNumber').val('')  
