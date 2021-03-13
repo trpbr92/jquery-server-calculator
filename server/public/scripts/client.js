@@ -1,4 +1,5 @@
 $(document).ready(onReady);
+let operation = "";
 function onReady(){
     //click handlers
     $('#addButton').on('click', addNum);
@@ -33,7 +34,8 @@ let sum = 0;
 //object for input values
 let numObject ={
     num1: $('#firstNumber').val(),
-    num2: $('#secondNumber').val()
+    num2: $('#secondNumber').val(),
+    operation: operation
 }//end numObject
 
 $.ajax({
