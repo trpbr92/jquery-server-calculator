@@ -4,6 +4,8 @@ function onReady(){
     //click handlers
     $('#addButton').on('click', addNum);
     $('#subtractButton').on('click', subtractNum);
+    $('#multiplyButton').on('click', multiplyNum);
+    $('#divideButton').on('click', divideNum);
     $('#equalsButton').on('click', equalsNum);
 }//end onReady
 
@@ -29,6 +31,26 @@ function subtractNum(){
   return Number(subtractNumObject.num1) - Number(subtractNumObject.num2);
 }//end subtractNum
 
+function multiplyNum(){
+    operation = "*";
+    console.log('in multiplyNum');
+  let multiplyNumObject ={
+      num1: $('#firstNumber').val(),
+      num2: $('#secondNumber').val()
+  }//end multiplyNumObject
+  return Number(multiplyNumObject.num1) * Number(multiplyNumObject.num2);
+}//end multiplyNum
+
+function divideNum(){
+    operation = "/";
+    console.log('in divideNum');
+  let divideNumObject ={
+      num1: $('#firstNumber').val(),
+      num2: $('#secondNumber').val()
+  }//end divideNumObject
+  return Number(divideNumObject.num1) / Number(divideNumObject.num2);
+}//end divideNum
+
 function equalsNum(){
 let sum = 0;
 if (operation == "+") {
@@ -36,8 +58,11 @@ if (operation == "+") {
 } 
 else if (operation == "-") {
     console.log(subtractNum()+sum);
+} 
+else if (operation == "*") {
+    console.log(multiplyNum()+sum);
 }  
-
-
-
+else if (operation == "/") {
+    console.log(divideNum()+sum);
+}   
 }//end equalsNum
