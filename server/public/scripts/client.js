@@ -31,7 +31,6 @@ function divideNum(){
 }//end divideNum
 
 function equalsNum(){
-let sum = 0;
 //object for input values
 let numObject ={
     num1: $('#firstNumber').val(),
@@ -58,7 +57,14 @@ $.ajax({
     let el = $('#mathOut');
     el.empty();
     for (let i = 0; i < response.length; i++) {
-    el.append(`<div><strong>${response[i].sum}</strong></div>`)
+    el.append(`<div>
+    <p><strong>${response[i].sum}</strong></p>
+    <h3>Log:</h3>
+    ${response[i].num1} 
+    ${response[i].operation} 
+    ${response[i].num2} = 
+    ${response[i].sum}
+    </div>`)
     }//end for
 }).catch(function(err){
     alert('error getting operations');
