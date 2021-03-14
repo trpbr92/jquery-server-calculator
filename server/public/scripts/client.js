@@ -59,17 +59,17 @@ $.ajax({
         el.empty();
         el.append(
     `<div>
-         <p><strong>${response[response.length-1].sum}</strong></p>
+         <h1>${response[response.length-1].sum}</h1>
     </div>`);
     }//end for
     for (let i = 0; i < response.length; i++) {
         el.append(
-    `<div>
+    `<li>
         ${response[i].num1} 
         ${response[i].operation} 
         ${response[i].num2} = 
         ${response[i].sum}
-    </div>`);
+    </li>`);
     }//end for
 }).catch(function(err){
     alert('error getting operations');
