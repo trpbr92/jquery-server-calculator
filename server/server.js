@@ -46,7 +46,7 @@ app.get('/operations', (req,res)=>{
 })
 
 app.post('/operations', (req,res)=>{
-    console.log('in /guesses POST:', req.body);
+    console.log('in /operations POST:', req.body);
     let numObject = req.body;
     mathOperations(numObject);
     console.log('in operations array', operations);
