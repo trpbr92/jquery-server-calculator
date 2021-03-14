@@ -43,7 +43,6 @@ else if (numObject.operation == "/") {
 app.get('/operations', (req,res)=>{
     console.log('you go to /operations');
     res.send(operations);
-    operations = [];
 })
 
 app.post('/operations', (req,res)=>{

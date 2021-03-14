@@ -55,16 +55,21 @@ $.ajax({
 }).then(function(response){
     console.log('Get from operations', response);
     let el = $('#mathOut');
-    el.empty();
     for (let i = 0; i < response.length; i++) {
-    el.append(`<div>
-    <p><strong>${response[i].sum}</strong></p>
-    <h3>Log:</h3>
-    ${response[i].num1} 
-    ${response[i].operation} 
-    ${response[i].num2} = 
-    ${response[i].sum}
-    </div>`)
+        el.empty();
+        el.append(
+    `<div>
+         <p><strong>${response[response.length-1].sum}</strong></p>
+    </div>`);
+    }//end for
+    for (let i = 0; i < response.length; i++) {
+        el.append(
+    `<div>
+        ${response[i].num1} 
+        ${response[i].operation} 
+        ${response[i].num2} = 
+        ${response[i].sum}
+    </div>`);
     }//end for
 }).catch(function(err){
     alert('error getting operations');
