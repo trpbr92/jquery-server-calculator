@@ -2,9 +2,9 @@
 Trace's Server Side Calculator
 ## Description
 
-<img src="https://imgur.com/3aWKsHO"/>
+<img src="[img]https://i.imgur.com/3aWKsHO.png[/img]"/>
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/kPFdUV9" data-context="false" ><a href="//imgur.com/a/kPFdUV9"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
