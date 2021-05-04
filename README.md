@@ -2,7 +2,7 @@
 Trace's Server Side Calculator
 ## Description
 
-<img src="[img]https://i.imgur.com/3aWKsHO.png[/img]"/>
+<img src="https://i.imgur.com/3aWKsHO.png"/>
 
 
 
