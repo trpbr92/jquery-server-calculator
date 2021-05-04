@@ -2,6 +2,8 @@
 Trace's Server Side Calculator
 ## Description
 
+<img src="https://imgur.com/3aWKsHO"/>
+
 Your project description goes here. What problem did you solve? How did you solve it?
 
 For this project, I created a calculator in which all of the logic and operations are done server-side and then sent back to the client and displayed on the DOM.
