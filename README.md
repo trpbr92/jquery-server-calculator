@@ -5,11 +5,7 @@ Trace's Server Side Calculator
 <img src="https://i.imgur.com/3aWKsHO.png"/>
 
 
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
 For this project, I created a calculator in which all of the logic and operations are done server-side and then sent back to the client and displayed on the DOM.
 
-Creating a functioning calculator is not difficult, but creating one that does all of the operations in the server was a challenge for me. 
+Creating a functioning calculator is not difficult, but creating one that does all of the operations in the server was a challenge for me and I initially struggled to get everything to communicate properly. 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
